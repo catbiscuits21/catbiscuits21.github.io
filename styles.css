@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("assets/fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("assets/fonts/Satoshi-Variable.ttf") format("truetype");
+}
+
+body {
+    font-family: "Satoshi";
+    background-color: #89986D;
+    justify-content: center;
+}
+
+main {
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0px 0px;
+    background-color: #F6F0D7;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+p {
+    font-weight: normal;
+}
+
+.tag-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* A tag that goes under a project to describe a skill/program used to make it such as photoshop or unity */
+.tag {
+    background-color: #C5D89D;
+    padding: 0px 15px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    gap: 7.5px;
+    line-height: 5px;
+}
+
+.tag img {
+    width: 20px;
+    height: 20px;
+}
+
+/* A visual line break */
+.break {
+    background-color: rgb(36, 36, 36);
+    height: 2.5px;
+    border-radius: 100px;
+    margin-bottom: 35px;
+}
+
+.main-header {
+    background-image: url("assets/imgs/floop-camp-website-header.png");
+    background-size: cover;
+    background-position: center -150px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #F6F0D7;
+    line-height: 60px;
+}
+
+.main-content {
+    padding: 42px 50px;
+}
+
+/* Contains projects for a specific area, such as Games, Pixel Art, Stylised Art */
+.area {
+    line-height: 20px;
+}
+
+/* Arranges the projects in a nice vertical list */
+.area-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* For a single project, such as Racrowox, Staffs and Snouts. This tag positions the header, tags, descrip and grid gaps nicely */
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.project h3 {
+    line-height: 0px;
+}
+
+.project-grid {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.project-grid video {
+    width: 560px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
