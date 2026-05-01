@@ -218,3 +218,7 @@ p {
 .icon-button {
 
 }
+
+.round {
+    border-radius: 100%;
+}
