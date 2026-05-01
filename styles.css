@@ -149,6 +149,31 @@ p {
     overflow: hidden;
     border-radius: 10px;    
     background-color: #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;  
+    cursor: pointer;
+}
+
+.project-media-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* This displays when hovered over an project media, giving further information of the media, such as it's title and creation date */
+.project-media-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    text-align: center;
+    color: white;
+}
+
+.project-media-container:hover .project-media-overlay {
+    opacity: 1;
 }
 
 /* Use this on an image or video to make it fit the project media container so its fully visible */
@@ -211,8 +236,20 @@ p {
     display: flex;
 }
 
-.modal-content { 
+.preview { 
 
+}
+
+.preview video {
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 65vh;
+}
+
+.preview img {
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 65vh;
 }
 
 .icon-button {
@@ -221,4 +258,14 @@ p {
 
 .round {
     border-radius: 100%;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
 }
