@@ -79,9 +79,9 @@ p {
 /* A visual line break */
 .break {
     background-color: rgb(36, 36, 36);
-    height: 2.5px;
+    height: 2px;
     border-radius: 100px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .main-header {
@@ -99,7 +99,10 @@ p {
 }
 
 .main-content {
+    display: flex;
+    flex-direction: column;
     padding: 42px 50px;
+    gap: 60px;
 }
 
 /* Contains projects for a specific area, such as Games, Pixel Art, Stylised Art */
@@ -134,18 +137,84 @@ p {
     display: flex;
     align-items: left;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.project-grid video {
+/* Use this on an div container where inside sits a video or an image displaying an example of the project */
+.project-media-container {
     width: 560px;
+    position: relative;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;    
+    background-color: #000;
+}
+
+/* Use this on an image or video to make it fit the project media container so its fully visible */
+.project-media-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+}
+
+/* Use this on an image or video to make it cover the project media container so there is no empty space */
+.project-media-cover {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    position: absolute;
+}
+
+/* Use this on an image or video to make it cover the project media container as a blurred background for it, good with project-media-contain */
+.project-media-blurred {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: blur(18px);
+    transform: scale(1.12);
+    opacity: 0.5;
+    position: absolute;
+}
+
+.align-media-top {
+    object-position: center top;
+}
+
+.align-media-center {
+    object-position: center;
+}
+
+.align-media-bottom {
+    object-position: center bottom;
+}
+
+.align-media {
+    object-position: var(--media-position, center center);
 }
 
 .modal {
+    display: none;
     position: fixed;
+    inset: 0;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.85);
     align-items: center;
     justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content { 
+
+}
+
+.icon-button {
+
 }
