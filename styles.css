@@ -148,7 +148,6 @@ p {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 10px;    
-    background-color: #000;
     transition: transform 0.2s ease, box-shadow 0.2s ease;  
     cursor: pointer;
 }
