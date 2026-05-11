@@ -571,8 +571,8 @@
                 </section>
             </section>
         </main>
-        <div id="preview-modal" class="modal" onclick="closeMediaPreview()"">
-            <div class="flex-column">
+        <div id="preview-modal" class="modal" onclick="closeMediaPreview()">
+            <div class="flex-column" onclick="event.stopPropagation()">
                 <p style="color: white;">Click outside to close</p>
                 <div id="preview-content" class="preview">
                 </div>

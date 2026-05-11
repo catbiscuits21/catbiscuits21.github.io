@@ -44,10 +44,10 @@ function playInViewport(){
             const video = entry.target;
             if (entry.isIntersecting){
                 video.play();
-                console.log("Trying to play video");
+                //console.log("Playing video");
             }
             else{
-                console.log("Pausing video");
+                //console.log("Pausing video");
                 video.pause();
                 video.currentTime = 0;
             }
