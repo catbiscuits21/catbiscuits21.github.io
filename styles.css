@@ -87,7 +87,7 @@ p {
 .main-header {
     background-image: url("assets/imgs/floop-camp-website-header.png");
     background-size: cover;
-    background-position: center -150px;
+    background-position: center -100px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 80px;

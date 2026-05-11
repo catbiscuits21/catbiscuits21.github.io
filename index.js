@@ -1,3 +1,22 @@
+const projectMediaContainers = document.querySelectorAll(".project-media-container");
+
+projectMediaContainers.forEach((container) => {
+  const video = container.querySelector("video");
+
+  if (video != null) {
+    container.addEventListener("mouseenter", () => 
+        {
+            video.play(); 
+        });
+
+    container.addEventListener("mouseleave", () => 
+        {
+            video.pause();
+            video.currentTime = 0;
+        });
+  }
+});
+
 //opens the modal for previewing media. Makes the modal's content include the src and creates html for the given type of media
 //valid type parameters: video, image
 function openMediaPreview(src, type){
