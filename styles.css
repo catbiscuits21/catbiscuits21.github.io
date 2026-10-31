@@ -89,9 +89,13 @@ p {
 }
 
 .main-header {
+    /* Allows the background image to have the fixed effect but without scaling due to zoom levels and different resolutions */
+    --header-image-width: min(100vw, 1250px);
+    --header-image-height: calc(var(--header-image-width) * 0.7727); /* the image is 1650x1275 */
+    background-color: #0A0A0A;
     background-image: url("assets/imgs/floop-camp-website-header.png");
-    background-size: cover;
-    background-position: center -100px;
+    background-size: var(--header-image-width) auto;
+    background-position: center calc(var(--header-image-height) * -0.1); /* nudge the multiplicative value to change image anchor pos :) */
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 80px;
