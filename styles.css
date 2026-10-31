@@ -24,7 +24,29 @@ body {
     background-image: url("assets/imgs/bg-pattern.webp");
     background-size: var(--pattern-size);
     background-repeat: repeat;
+    background-attachment: fixed;
+    animation: scroll-pattern 30s linear infinite; /* number changes the speed of the scroll anim */
     justify-content: center;
+}
+
+/* 
+    Slides the background pattern diagonally by exactly one tile, then snaps back to the start and repeats.
+    The distance must match --pattern-size or the animation will look poop.
+*/
+@keyframes scroll-pattern {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: var(--pattern-size) var(--pattern-size);
+    }
+}
+
+/* Stops the background pattern from moving for people who have reduced motion turned on in their system settings */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
 }
 
 main {
