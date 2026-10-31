@@ -18,8 +18,12 @@
 }
 
 body {
+    --pattern-size: 400px;
     font-family: "Satoshi";
     background-color: #89986D;
+    background-image: url("assets/imgs/bg-pattern.webp");
+    background-size: var(--pattern-size);
+    background-repeat: repeat;
     justify-content: center;
 }
 
